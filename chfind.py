@@ -13,7 +13,8 @@ import sys
 
 def create_reader(file_path):
     reader = csv.DictReader(
-        open(file_path, "r", encoding="windows-1252"))
+        open(file_path, "r")
+    )
     return reader
 
 
@@ -57,7 +58,7 @@ def _read_argv():
 
 
 def _read_input():
-    return input("Enter feature (press enter to restart):")
+    return input("Enter feature (press enter to quit):")
 
 
 _USING_ARGS=False
